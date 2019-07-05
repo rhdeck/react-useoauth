@@ -11,6 +11,7 @@ const useOauth = ({
 }) => {
   if (!args) args = {};
   const url = buildURL(authorizeUrl, {
+    ...args,
     client_id: clientId,
     redirect_uri: redirectUri,
     response_type: "code",
