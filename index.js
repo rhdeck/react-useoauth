@@ -14,8 +14,7 @@ const useOauth = ({
     client_id: clientId,
     redirect_uri: redirectUri,
     response_type: "code",
-    state: state ? JSON.stringify(state) : undefined,
-    ...args
+    state: state ? JSON.stringify(state) : undefined
   });
   const [code, setCode] = useState();
   const [status, setStatus] = useState();
