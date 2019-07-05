@@ -9,12 +9,13 @@ const useOauth = ({
   state,
   args
 }) => {
+  if (!args) args = {};
   const url = buildURL(authorizeUrl, {
     client_id: clientId,
     redirect_uri: redirectUri,
     response_type: "code",
     state: state ? JSON.stringify(state) : undefined,
-    ...(args || {})
+    ...args
   });
   const [code, setCode] = useState();
   const [status, setStatus] = useState();
