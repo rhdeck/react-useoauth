@@ -1,10 +1,4 @@
 import qs from "qs";
-function buildURL(url, params) {
-  if (params == null) return url;
-  const serializedParams = qs.stringify(params);
-  if (!serializedParams) return url;
-  return `${url}${url.indexOf("?") < 0 ? "?" : "&"}${serializedParams}`;
-}
 const useOauth = ({
   isAuthenticated,
   location,
