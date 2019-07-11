@@ -13,7 +13,7 @@ const useOauth = ({
     client_id: clientId,
     redirect_uri: redirectUri,
     response_type: "code",
-    state: state ? JSON.stringify(state) : undefined
+    state: state ? state : undefined
   };
   const url = buildURL(
     authorizeUrl,
